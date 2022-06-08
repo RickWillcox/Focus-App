@@ -26,10 +26,10 @@ export const Timer = ({ focusSubject, onTimerEnd, clearSubject }) => {
 
   const onEnd = (reset) => {
     Vibration.vibrate(vibrationPattern);
-    setIsRunning(false);
     setProgress(1);
     reset();
     onTimerEnd(focusSubject);
+    setIsRunning(false);
   };
 
   return (
