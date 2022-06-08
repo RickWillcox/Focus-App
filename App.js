@@ -8,8 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 import Constants from 'expo-constants';
-import { Focus } from './src/features/focus';
-import { Timer } from './src/features/timer';
+import { Focus } from './src/features/Focus';
+import { Timer } from './src/features/Timer';
 import { colors } from './src/utils/colors';
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
         <Timer
           focusSubject={currentSubject}
           onTimerEnd={() => {}}
-          clearSubject={() => {}}
+          clearSubject={(val) => setCurrentSubject(val)}
         />
       )}
     </SafeAreaView>
